@@ -209,20 +209,20 @@
 
     /*Footer*/
     footer {
-        background-color: var(--plum);
-    }
-
-    .contact {
-        width: 480px;
         text-align: center;
-        margin: 0 auto;
-        padding: 3rem 0;
 
-        p:last-child {
-            margin-top: 3rem;
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 2rem 0;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+            font-size: 3rem;
         }
     }
-
 }
 
 @layer utilities {}
