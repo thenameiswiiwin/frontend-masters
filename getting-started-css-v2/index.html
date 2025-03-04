@@ -16,7 +16,17 @@
 
 <body>
     <header>
-        <nav>
+        <div class='hamburger'>
+            <a href="index.html">
+                <span class='fas fa-code' aria-hidden='true'></span>
+                <span>Huy Nguyen</span>
+            </a>
+            <a href="#navbar" aria-label="Open main menu">
+                <span class="sr-only">Open main menu</span>
+                <span class="fas fa-bars" aria-hidden="true"></span>
+            </a>
+        </div>
+        <nav id="navbar">
             <ul>
                 <li>
                     <h1>
@@ -26,9 +36,9 @@
                         </a>
                     </h1>
                 </li>
-                <li><a href="#projecs">Projects</a></li>
+                <li><a href="index.html#projecs">Projects</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
                 <li>
                     <a href="https://www.linkedin.com/in/thenameiswiiwin">
                         <span class='fab fa-linkedin' aria-hidden="true"></span>
@@ -43,9 +53,14 @@
                 </li>
                 <li><a class="button" href="#">Resume</a></li>
             </ul>
+            <a class="close" href="#" aria-label="Close main menu">
+                <span class="sr-only">Close main menu</span>
+                <span class="fas fa-times" aria-hidden="true"></span>
+            </a>
         </nav>
     </header>
     <main>
+        <div class="gradient"></div>
         <section class="hero">
             <p class="hero__title">Hi, my name is <span>Huy Nguyen.</span></p>
             <h2>I love to code.</h2>

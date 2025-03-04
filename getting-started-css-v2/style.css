@@ -117,27 +117,15 @@
 @layer components {
 
     /*Navigation*/
-    nav {
-        font-family: var(--mono);
-        font-size: 80%;
-        padding: 1rem;
+    .hamburger {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
 
-        h1 {
-            font-family: var(--sans);
-        }
-
-        ul {
-            padding: 0;
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: center;
-            align-items: center;
-            gap: 2rem;
-        }
-
-        li:first-child {
-            flex-basis: 100%;
-            text-align: center;
+        a {
+            color: var(--white);
+            display: block;
         }
 
         [class*='fa-'] {
@@ -145,9 +133,39 @@
             color: var(--aqua);
         }
 
-        h1 [class*='fa-'] {
-            font-size: 100%;
-            color: var(--aqua);
+        a:hover,
+        [class*='fa-']:hover {
+            color: var(--magenta);
+        }
+
+        @media (min-width: 560px) {
+            display: none;
+        }
+    }
+
+
+    nav {
+        background-color: var(--black);
+        font-family: var(--mono);
+        font-size: 80%;
+        position: absolute;
+        z-index: 1000;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        transform: translateX(-100%);
+        transition: transform 0.5s ease-in-out;
+
+        ul {
+            margin: 1rem auto 0 auto;
+            display: flex;
+            flex-flow: column wrap;
+            align-items: center;
+            gap: 2rem;
         }
 
         a {
@@ -155,9 +173,59 @@
             display: block;
         }
 
+        [class*='fa-'] {
+            font-size: 150%;
+            color: var(--aqua);
+        }
+
         a:hover,
         [class*='fa-']:hover {
             color: var(--magenta);
+        }
+
+        .close {
+            padding: 1rem 2rem;
+        }
+
+        @media (min-width: 560px) {
+            position: static;
+            width: auto;
+            height: auto;
+            overflow: auto;
+            display: block;
+            transform: translateX(0);
+            transition: none;
+            padding: 1rem 2rem;
+
+            h1 {
+                font-family: var(--sans);
+            }
+
+
+            h1 [class*='fa-'] {
+                font-size: 100%;
+                color: var(--aqua);
+            }
+
+
+            ul {
+                padding: 0;
+                margin: auto;
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: center;
+                align-items: center;
+                gap: 2rem;
+            }
+
+            li:first-child {
+                flex-basis: 100%;
+                text-align: center;
+            }
+
+            .close {
+                display: none;
+            }
         }
 
         @media (min-width: 850px) {
@@ -170,6 +238,10 @@
                 margin-right: auto;
             }
         }
+    }
+
+    nav:target {
+        transform: translateY(0);
     }
 
     /*Hero*/
