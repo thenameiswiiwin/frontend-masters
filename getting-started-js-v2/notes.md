@@ -83,3 +83,12 @@
     - for (let student of students) {}
 - while loops -> run while a conition remains true.
     - while (students.length > 0) {}
+
+## Functions
+- a Procedure -> a collections of things you want to do. -> group resuable code blocks.
+- function declaration.
+    - function greet
+- function expression
+    - const greet = function() { console.log('Hello') }
+- Arrow Function
+    - const greet = () => console.log('Hello')
